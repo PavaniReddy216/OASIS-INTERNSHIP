@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login System</title>
+</head>
+<body><center>
+
+  <div id="loginPage">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" required>
+      <br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+      <br>
+      <button type="button" onclick="authenticateUser()">Login</button>
+    </form>
+    <p>Don't have an account? <a href="#" onclick="showRegisterForm()">Register</a></p>
+  </div>
+
+  <div id="registerPage" style="display:none">
+    <h2>Register</h2>
+    <form id="registerForm">
+      <label for="newUsername">New Username:</label>
+      <input type="text" id="newUsername" required>
+      <br>
+      <label for="newPassword">New Password:</label>
+      <input type="password" id="newPassword" required>
+      <br>
+      <button type="button" onclick="registerUser()">Register</button>
+    </form>
+    <p>Already have an account? <a href="#" onclick="showLoginPage()">Login</a></p>
+  </div>
+
+  <div id="securePage" style="display:none">
+    <h2>Secured Page</h2>
+    <p>Welcome! This is a secured page.</p>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <script src="login.js"></script>
+
+</center></body>
+</html>
